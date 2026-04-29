@@ -1,0 +1,334 @@
+/* ============================================
+   animation.css
+   既存の style.css / common.css に影響を与えず
+   アニメーションだけを追加するファイルです。
+   読み込み順：style.css の後に追加してください。
+   ============================================ */
+
+/* ------------------------------------------
+   1. フェードイン（スクロール連動）
+   ------------------------------------------ */
+.js-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 左から */
+.js-fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js-fade-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 右から */
+.js-fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js-fade-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 子要素を順番に遅延させる */
+.js-stagger .js-fade:nth-child(1) { transition-delay: 0s; }
+.js-stagger .js-fade:nth-child(2) { transition-delay: 0.12s; }
+.js-stagger .js-fade:nth-child(3) { transition-delay: 0.24s; }
+.js-stagger .js-fade:nth-child(4) { transition-delay: 0.36s; }
+.js-stagger .js-fade:nth-child(5) { transition-delay: 0.48s; }
+.js-stagger .js-fade:nth-child(6) { transition-delay: 0.60s; }
+
+/* ------------------------------------------
+   2. ページロード時：ヘッダーのフェードイン
+   ------------------------------------------ */
+@keyframes headerFadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.header {
+  animation: headerFadeDown 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ------------------------------------------
+   3. MV テキストのフェードイン（ページロード）
+   ------------------------------------------ */
+@keyframes mvTextFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.mainvisual-text h1 {
+  animation: mvTextFadeUp 1.1s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/*----------------------------------------
+    4. ナビ：スクロールでヘッダー背景を
+       半透明ブラックに切り替え（PC・SP共通）
+  ----------------------------------------*/
+  // 初期状態を必ず透明に（SPでも適用）
+  $(".header").css({
+    "background-color": "transparent",
+    "transition": "background-color 0.5s ease, backdrop-filter 0.5s ease",
+  });
+
+  $(window).on("scroll.header", function () {
+    if ($(window).scrollTop() > 80) {
+      $(".header").css({
+        "background-color": "rgba(0,0,0,0.75)",
+        "backdrop-filter": "blur(6px)",
+      });
+    } else {
+      $(".header").css({
+        "background-color": "transparent",
+        "backdrop-filter": "none",
+        "-webkit-backdrop-filter": "none",
+      });
+    }
+
+/* ------------------------------------------
+   5. メニューアイテム：ホバーでゆっくりズーム
+      （既存の filter: brightness を補強）
+   ------------------------------------------ */
+.menu_item img,
+.menu1_item img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.4s ease;
+  display: block;
+}
+.menu_item:hover img,
+.menu1_item:hover img {
+  transform: scale(1.04);
+}
+/* menu_item はoverflow:hiddenが必要 */
+.menu_item,
+.menu1_item {
+  overflow: hidden;
+}
+/* ── グラデーションオーバーレイ（画像の下半分を暗く） ── */
+.menu_item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── 文字にtext-shadowで縁取り ── */
+.menu_item .menu_text {
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.7),
+    0 0px 2px rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+/* ------------------------------------------
+   6. ニュースアイテム：ホバーでラインスライド
+   ------------------------------------------ */
+.news__item {
+  position: relative;
+  overflow: hidden;
+}
+.news__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.news__item:hover::before {
+  width: 100%;
+}
+.news__item a {
+  transition: letter-spacing 0.4s ease, opacity 0.3s ease;
+}
+.news__item:hover a {
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+/* ------------------------------------------
+   7. SNSボタン：ホバーで背景が右から広がる
+   ------------------------------------------ */
+.sns_btn {
+  overflow: hidden;
+}
+.sns_btn a {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+.sns_btn a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  transform: translateX(-101%);
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+  z-index: -1;
+}
+.sns_btn a:hover {
+  color: #ffffff;
+}
+.sns_btn a:hover::before {
+  transform: translateX(0);
+}
+
+/* ------------------------------------------
+   8. ロゴ：ホバーでわずかに広がる
+   ------------------------------------------ */
+.logo a {
+  display: inline-block;
+  transition: letter-spacing 0.4s ease, opacity 0.3s ease;
+}
+.logo a:hover {
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+/* ------------------------------------------
+   9. 詳細ボタン（detail_btn）：ホバーで背景反転
+   ------------------------------------------ */
+.detail_btn {
+  overflow: hidden;
+}
+.detail_btn a {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+.detail_btn a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+  z-index: -1;
+}
+.detail_btn a:hover {
+  color: #ffffff;
+}
+.detail_btn a:hover::before {
+  transform: scaleX(1);
+}
+
+/* ------------------------------------------
+   10. フッター：リンクホバー
+   ------------------------------------------ */
+.footer_item a {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+.footer_item a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+}
+.footer_item a:hover {
+  opacity: 0.7;
+}
+.footer_item a:hover::after {
+  width: 100%;
+}
+
+/* ------------------------------------------
+   11. shop_img：ホバーでズーム
+   ------------------------------------------ */
+.shop_img {
+  overflow: hidden;
+}
+.shop_img img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.shop_img:hover img {
+  transform: scale(1.04);
+}
+
+/* ------------------------------------------
+   12. sub_img（全幅画像）：スクロール視差っぽく
+       ※ JSと組み合わせて軽量なパララックス
+   ------------------------------------------ */
+.sub_img {
+  overflow: hidden;
+}
+.sub_img img {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* ------------------------------------------
+   13. menu nav ボタン（menu1.html）：ホバー強化
+   ------------------------------------------ */
+.menu__item {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease, border 0.4s ease;
+}
+.menu__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.menu__item:hover::before {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------
+   14. サムネイル画像切り替え：フェードイン効果
+       （script.js の fadeIn と連携済み）
+   ------------------------------------------ */
+#MainPhoto {
+  transition: opacity 0.3s ease;
+}
+
+/* ------------------------------------------
+   15. スクロールインジケーター（MV下部）
+   ------------------------------------------ */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.4; }
+}
+.indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+/* ------------------------------------------
+   モバイル対応：アニメーション軽量化
+   ------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

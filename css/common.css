@@ -1,0 +1,402 @@
+/* ==========
+shop
+==========*/
+.shop{
+  margin-top: 260px;
+}
+.shop_inner{
+  margin-left: auto;
+}
+.shop_contents{
+  display: flex;
+  justify-content: space-between;
+}
+.shop_contents:nth-child(2) {
+  margin-top: 200px;
+}
+.shop_text{
+  margin-left: 9.4%;
+}
+.shop_text .heading__h2{
+  padding-bottom: 64px;
+}
+.shop_list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 365px;
+}
+.shop_item-name{
+  width: 80px;
+  padding-bottom: 24px;
+  font-size: 16px;
+}
+.shop_item-info{
+  width: calc(100% - 80px);
+  padding-bottom: 24px;
+  font-size: 16px;
+  padding-left: .5em;
+  line-height: 1.5;
+}
+.shop_img{
+  width: calc(100% - 460px - 9.4%);
+}
+.shop_img img{
+  width: 100%;
+  height: 467px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .shop{
+  margin-top: 73px;
+}
+.shop_text{
+  margin-left: 20px;
+}
+.shop_contents{
+  display: block;
+  margin: 0 auto;
+}
+.shop_text .heading__h2{
+  padding-bottom: 32px;
+}
+.shop_item-name{
+  font-size: 15px;
+}
+.shop_item-info{
+  font-size: 14px;
+}
+.shop_contents:nth-child(2) {
+  margin-top: 40px;
+}
+.shop_img{
+  width: 100%;
+}
+.shop_img img{
+  width: 100%;
+  height: 467px;
+  object-fit: cover;
+}
+}
+@media screen and (max-width: 391px) {
+
+.shop_text{
+  width: 100%;
+}
+.shop_text{
+  margin-left: 20px;
+}
+.shop_img{
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.shop_img img{
+  width: 390px;
+  height: 260px;
+  object-fit: cover;
+}
+.shop_contents:nth-child(2) {
+  margin-top: 40px;
+}
+}
+/* ==========
+sns
+==========*/
+.sns{
+  margin-top: 100px;
+}
+.sns_inner{
+  max-width: 1200px;
+  margin-left: auto;
+}
+.sns_contents{
+  display: flex;
+  align-items: center;
+}
+.sns_text {
+  width:47%;
+}
+.sns_text img{
+  width: 220px;
+  height: 50px;
+  margin-bottom: 40px;
+}
+.sns_text p{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+.sns_img{
+  width:50%;
+  object-fit: cover;
+}
+.sns_btn {
+  max-width: 250px;
+  height: 60px;
+  position: relative;
+}
+.sns_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: left;
+  padding-left: 19px;
+}
+.sns_btn::before{
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 19px;
+  width: 10px;    /* くの字を山なりに見た時、左側の長さ */
+  height: 10px;   /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid #000;     /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid #000;   /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg);
+}
+.sns_btn::after{
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 18px;
+  width: 15px; /* 棒の長さ */
+  height: 2px; /* 棒の太さ */
+  background: #000; /* 棒の色 */
+}
+
+@media screen and (max-width: 767px) {
+  .sns{
+    position: relative;
+    margin-left: 0;
+  }
+  .sns_inner{
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sns_img{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: -50px;
+  z-index: 0;
+  }
+.sns_img img{
+  width: 267px;
+  height: 168px;
+  object-fit: cover;
+  }
+.sns_text {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 24px;
+  z-index: 999;
+}
+.sns_text img{
+  width: 117px;
+  height: 18px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.sns_text p{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.sns_btn {
+  max-width: 196px;
+  height: 40px;
+}
+.sns_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 2.5;
+  text-align: left;
+  padding-left: 19px;
+}
+}
+@media screen and (max-width: 391px) {
+.sns_img img{
+  max-width: 100%;
+  height: 168px;
+  margin-right: auto;
+  object-fit: cover;
+
+  position: relative;
+  z-index: 0;
+}
+}
+
+/* ==========
+footer
+==========*/
+.footer{
+  margin-top: 100px;
+}
+.footer_list{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 24px;
+}
+.footer_contents{
+  margin: 0 auto;
+}
+.footer_contents .logo{
+  text-align: center;
+  padding-bottom: 24px;
+}
+.copyright{
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+.footer_contents{
+  max-width: 100%;
+  padding-left: 24px;
+}
+.footer_list{
+  display: block;
+  text-align: center;
+}
+.footer_item{
+  padding-bottom: 11px;
+}
+.footer_item a{
+  font-size: 14px;
+}
+}
+@media screen and (max-width: 391px) {
+
+}
+
+/* ==========
+menuのheader
+==========*/
+.mainvisual-inner{
+  position: relative;
+}.mainvisual-img{
+  z-index: 0;
+}
+.mainvisual-img img{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  object-fit: cover;
+}
+.main_heading{
+  width: 400px;
+  height: 145px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #000000;
+  border-radius: 30px 30px 0 0;
+  transform: translateX(-50%);
+  z-index: 9997;
+}
+.main_heading .heading__h2{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translateY(30%);
+}
+.main_heading .heading__h2 span{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+.main_heading{
+  width: 300px;
+  height: 80px;
+  border-radius: 10px 10px 0 0;
+}
+}
+@media screen and (max-width: 391px) {
+.mainvisual-img img{
+  width: 100%;
+  height: 343px;
+  object-fit: cover;
+}
+}
+
+/* ==========
+menu nav
+==========*/
+.menu_nav{
+  margin-top: 80px;
+}
+.menu__nav{
+  max-width: 860px;
+  margin: 0 auto;
+}
+.menu__list{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+.menu__item{
+  text-align: center;
+  background-color: #ffffff;
+  line-height: 3;
+  display: block;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  transition: .5s;
+  cursor: pointer;
+}
+.menu__item a{
+
+}
+.menu__item:hover{
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+.menu__item a:hover{
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+.menu__nav{
+  max-width: 340px;
+  margin: 0 auto;
+}
+.menu__list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
+}
+.menu__item{
+  text-align: center;
+}
+.menu__item a{
+  font-size: 14px;
+  width: 160px;
+  height: 50px;
+}
+}
+@media screen and (max-width: 391px) {
+
+}

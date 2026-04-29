@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仮想スイーツショップ</title>
+
+    <!-- ▼favicon -->
+    <!-- <link rel="icon" href=""> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Pinyon+Script&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ▼CSS読み込み -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css">
+
+    <!-- ▼script読み込み -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- ▼header -->
+    <header>
+      <div class="header">
+        <div class="header_inner">
+          <div class="logo">
+            <a href="./index.html"> Chantilly Patisserie </a>
+          </div>
+
+          <div class="hamburger">
+            <span class="hamburger__span"></span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a href="index.html">ABOUT</a></li>
+              <li class="header__item"><a href="menu1.html">MENU</a></li>
+              <li class="header__item"><a href="common.html">ACCESS</a></li>
+              <li class="header__item"><a href="common.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- ▼mainvisual_slideshow -->
+      <div class="slide-wrapper">
+        <div class="mainvisual">
+          <div class="mainvisual-text">
+            <h1>
+              極上の舌触り、<br />
+              Chantilly Patisserieの贅沢なひととき
+            </h1>
+          </div>
+          <div id="slide" class="slide">
+            <picture>
+              <source
+                srcset="./images/sp/mv-sp01.png"
+                media="(max-width: 391px)"
+              />
+              <img src="./images/main/mv-pc01.png" alt="チョコレートの画像" />
+            </picture>
+            <picture>
+              <source
+                srcset="./images/sp/mv-sp02.png"
+                media="(max-width: 391px)"
+              />
+              <img src="./images/main/mv-pc02.png" alt="グラノーラバーの画像" />
+            </picture>
+            <picture>
+              <source
+                srcset="./images/sp/mv-sp03.png"
+                media="(max-width: 391px)"
+              />
+              <img src="./images/main/mv-pc03.png" alt="マカロンと花の画像" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ▼ニュース -->
+      <section class="news">
+        <div class="news__inner">
+          <div class="news__contents">
+            <h2 class="heading__h2">NEWS<span>お知らせ</span></h2>
+            <ul class="news__list">
+              <li class="news__item">
+                <a href="index.html">
+                  <time datetime="">2024/11/04</time>
+                  <p class="news__text">リラックスと美味しさの極上の出会い。</p>
+                </a>
+              </li>
+              <li class="news__item">
+                <a href="index.html">
+                  <time datetime="">2024/11/04</time>
+                  <p class="news__text">リラックスと美味しさの極上の出会い。</p>
+                </a>
+              </li>
+              <li class="news__item">
+                <a href="index.html">
+                  <time datetime="">2024/11/04</time>
+                  <p class="news__text">リラックスと美味しさの極上の出会い。</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub_img">
+          <img
+            class="pc-only"
+            src="./images/main/kaboompics_chocolate-and-books-4145 2.png"
+            alt="花瓶に入った花とチョコレートの画像"
+          />
+          <img
+            class="sp-only"
+            src="./images/sp/kaboompics_chocolate-and-books-4145 3.png"
+            alt="花瓶に入った花とチョコレートの画像"
+          />
+        </div>
+      </section>
+      <!-- ▼コンセプト -->
+      <section class="Concept">
+        <div class="Concept_inner">
+          <div class="Concept_contents">
+            <div class="Concept_text">
+              <h3 class="heading__h3">Concept</h3>
+              <span
+                >シャンティ・パティスリー<br />
+                （Chantilly Patisserie）</span
+              >
+              <p>
+                &bull;「シャンティ」はフランス語で「優雅さ」を表し、シャンティリーはフランスの有名な町であるため、高級感と伝統を感じさせます。
+              </p>
+              <p>
+                &bull;「シャンティ」はフランス語で「優雅さ」を表し、シャンティリーはフランスの有名な町であるため、高級感と伝統を感じさせます。
+              </p>
+            </div>
+            <div class="Concept_img">
+              <img
+                src="./images/main/kaboompics_close-up-a-nut-chocolate-bar-4156 1.png"
+                alt="チョコレートとぼやけた花の画像"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sub_img">
+          <img
+            class="pc-only"
+            src="./images/main/kaboompics_a-healthy-granola-peanut-snack-bar-5071 1.png"
+            alt="グラノーラバーの画像"
+          />
+          <img
+            class="sp-only"
+            src="./images/sp/kaboompics_a-healthy-granola-peanut-snack-bar-5072 1.png"
+            alt="グラノーラバーの画像"
+          />
+        </div>
+      </section>
+      <!-- ▼メニュー -->
+      <section class="menu">
+        <div class="menu_inner">
+          <h2 class="heading__h2">
+            Menu<span>Chantilly Patisserieのメニュー</span>
+          </h2>
+          <div class="menu_contents">
+            <ul class="menu_list">
+              <li class="menu_item">
+                <a href="menu1.html?tab=chocolate">
+                  <img
+                    src="images/main/menu_chocolate.png"
+                    alt="チョコレートの画像"
+                  />
+                  <p class="menu_text">チョコレート</p>
+                </a>
+              </li>
+              <li class="menu_item">
+                <a href="menu1.html?tab=granola">
+                  <img
+                    src="images/main/グラノーラバー.png"
+                    alt="グラノーラバーの画像"
+                  />
+                  <p class="menu_text">グラノーラバー</p>
+                </a>
+              </li>
+              <li class="menu_item">
+                <a href="menu1.html?tab=adult-choco">
+                  <img
+                    src="images/main/大人のショコラ.png"
+                    alt="大人のショコラの画像"
+                  />
+                  <p class="menu_text">大人のショコラ</p>
+                </a>
+              </li>
+              <li class="menu_item">
+                <a href="menu1.html?tab=macaron">
+                  <img src="images/main/マカロン.png" alt="マカロンの画像" />
+                  <p class="menu_text">マカロン</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ▼common -->
+      <section id="common"></section>
+      <script>
+        $("#common").load("common.html");
+      </script>
+    </main>
+    <script src="./js/animation.js"></script>
+  </body>
+</html>

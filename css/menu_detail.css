@@ -1,0 +1,133 @@
+.menu1_detail{
+  margin-top: 80px;
+}
+.menu1_detail_inner{
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.menu1_detail-img{
+  max-width: 400px;
+}
+.wrap {
+width:400px;
+background:#000;
+margin:20px auto;
+padding:10px;
+}
+.wrap img {
+  height:400px;
+}
+.wrap ul {
+  display: flex;
+  justify-content: space-between;
+
+  overflow:hidden;
+  margin-top:20px;
+  clear:both;
+  gap: 10px;
+}
+.wrap li {
+  width:100%;
+  height: 100%;
+  text-align: center;
+}
+.wrap li img {
+  cursor:pointer;
+
+  width:80px;
+  height: 80px;
+  object-fit: cover;
+}
+.menu1_detail_contents{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu1_detail--text{
+  max-width: 500px;
+}
+.menu1_heading{
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+.menu1_detail--text p:nth-child(2){
+  font-size: 18px;
+  text-align: right;
+  padding-bottom: 48px;
+}
+.menu1_detail--text p:nth-child(3){
+  font-size: 16px;
+  line-height: 1.5;
+  padding-bottom: 48px;
+}
+
+.detail_btn {
+  max-width: 250px;
+  height: 60px;
+  position: relative;
+}
+.detail_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: left;
+  padding-left: 19px;
+}
+.detail_btn::before{
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 19px;
+  width: 10px;    /* くの字を山なりに見た時、左側の長さ */
+  height: 10px;   /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid #000;     /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid #000;   /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg);
+}
+.detail_btn::after{
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 18px;
+  width: 15px; /* 棒の長さ */
+  height: 2px; /* 棒の太さ */
+  background: #000; /* 棒の色 */
+}
+@media screen and (max-width: 767px) {
+.menu1_detail_inner{
+  max-width: 360px;
+  margin: 0 auto;
+}
+.menu1_detail_contents{
+  display: block;
+}
+.menu1_detail--text{
+  max-width: 360px;
+  padding: 0 10px;
+}
+.menu1_heading{
+  font-size: 20px;
+}
+.menu1_detail--text p:nth-child(2){
+  font-size: 16px;
+  text-align: right;
+  padding-bottom: 24px;
+}
+.menu1_detail--text p:nth-child(3){
+  padding-bottom: 24px;
+}
+.detail_btn{
+  margin-left: 10px;
+}
+}
+@media screen and (max-width: 391px) {
+
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仮想スイーツショップ</title>
+
+    <!-- ▼favicon -->
+    <!-- <link rel="icon" href=""> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Pinyon+Script&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ▼CSS読み込み -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/menu1.css" />
+    <link rel="stylesheet" href="./css/animation.css">
+
+    <!-- ▼script読み込み -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- ▼header -->
+    <header>
+      <div class="header">
+        <div class="header_inner">
+          <div class="logo">
+            <a href="./index.html"> Chantilly Patisserie </a>
+          </div>
+
+          <div class="hamburger">
+            <span class="hamburger__span"></span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a href="index.html">ABOUT</a></li>
+              <li class="header__item"><a href="index.html">MENU</a></li>
+              <li class="header__item"><a href="index.html">ACCESS</a></li>
+              <li class="header__item"><a href="index.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- ▼mainvisual -->
+      <div class="mainvisual">
+        <div class="mainvisual-inner">
+          <div class="mainvisual-img">
+            <img
+              class="pc-only"
+              src="./images/main/mv-pc01.png"
+              alt="チョコレートの画像"
+            />
+            <img
+              class="sp-only"
+              src="./images/sp/kaboompics_close-up-a-nut-chocolate-bar-4157 1.png"
+              alt="チョコレートの画像"
+            />
+          </div>
+          <div class="main_heading">
+            <h2 class="heading__h2">Menu<span>メニュー</span></h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu_nav">
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__item active" data-tab="chocolate">チョコレート</li>
+            <li class="menu__item" data-tab="granola">グラノーラバー</li>
+            <li class="menu__item" data-tab="adult-choco">
+              大人のチョコレート
+            </li>
+            <li class="menu__item" data-tab="macaron">マカロン</li>
+          </ul>
+        </nav>
+      </div>
+      <section class="menu1">
+        <div class="menu1_inner">
+          <div class="menu1_contents">
+            <div id="chocolate" class="panel active">
+              <ul class="menu1_list">
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="index.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail.html">
+                    <img
+                      src="./images/menu/chocolates-1737462_1280 1.png"
+                      alt="チョコレートの画像"
+                    />
+                    <p class="menu1_heading">ボンボンショコラ</p>
+                    <p>1個 400円(税込)</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="granola" class="panel">
+              <ul class="menu1_list">
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail1.html">
+                    <img
+                      src="./images/menu/ダミー画像.jpeg"
+                      alt="灰色のダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 100円(税込)</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="adult-choco" class="panel">
+              <ul class="menu1_list">
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail2.html">
+                    <img
+                      src="./images/menu/ダミー画像‗blue.jpeg"
+                      alt="ブルーのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 200円(税込)</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="macaron" class="panel">
+              <ul class="menu1_list">
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+                <li class="menu1_item">
+                  <a href="menu_detail3.html">
+                    <img
+                      src="./images/menu/ダミー画像‗オレンジ.jpeg"
+                      alt="オレンジのダミー画像"
+                    />
+                    <p class="menu1_heading">テキストテキストテキスト</p>
+                    <p>1個 300円(税込)</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ▼common -->
+      <section id="common"></section>
+      <script>
+        $("#common").load("common.html");
+      </script>
+    </main>
+    <script src="./js/animation.js"></script>
+  </body>
+</html>

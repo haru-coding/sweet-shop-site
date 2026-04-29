@@ -1,0 +1,60 @@
+/* ==========
+共通
+==========*/
+p{
+  font-size: 18px;
+}
+/* ==========
+menu
+==========*/
+.menu1{
+  margin-top: 80px;
+}
+.menu1_inner{
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.menu1_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+.menu1_item{
+  width: 320px;
+}
+.menu1_heading{
+  padding-top: 20px;
+}
+.menu1_item p{
+  font-size: 18px;
+  padding: 11px 0;
+}
+.menu1_item p:nth-child(3){
+  text-align: right;
+}
+.menu1_item:hover{
+  filter: brightness(0.7);
+}
+.panel {
+  display: none;
+  text-align: center;
+}
+.panel.active {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+.menu1_inner{
+  max-width: 340px;
+  margin: 0 auto;
+}
+.menu1_list{
+  gap: 20px;
+}
+.menu1_item{
+  width: 160px;
+}
+}
+@media screen and (max-width: 391px) {
+
+}
